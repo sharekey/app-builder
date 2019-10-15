@@ -14,9 +14,11 @@ require (
 	github.com/develar/go-pkcs12 v0.0.0-20181115143544-54baa4f32c6a
 	github.com/disintegration/imaging v1.6.1
 	github.com/dustin/go-humanize v1.0.0
+	github.com/go-bindata/go-bindata v3.1.2+incompatible // indirect
 	github.com/golang/protobuf v1.3.2 // indirect
 	github.com/json-iterator/go v1.1.7
 	github.com/jsummers/gobmp v0.0.0-20151104160322-e2ba15ffa76e // indirect
+	github.com/jteeuwen/go-bindata v3.0.7+incompatible
 	github.com/mattn/go-colorable v0.1.2
 	github.com/mattn/go-isatty v0.0.9
 	github.com/mcuadros/go-version v0.0.0-20190830083331-035f6764e8d2

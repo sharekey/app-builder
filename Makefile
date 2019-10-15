@@ -42,7 +42,6 @@ assets:
 	go-bindata -o ./pkg/package-format/snap/snapScripts.go -pkg snap -prefix ./pkg/package-format/snap ./pkg/package-format/snap/desktop-scripts
 
 publish: build-all
-	make lint
 	./scripts/publish-npm.sh
 
 update-deps:

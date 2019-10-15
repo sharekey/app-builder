@@ -3,10 +3,14 @@ package publisher
 import (
 	"context"
 	"mime"
+	//"mime"
 	"net/http"
 	"os"
 	"path"
 	"strings"
+
+	//"path"
+	//"strings"
 
 	"github.com/alecthomas/kingpin"
 	"github.com/aws/aws-sdk-go/aws"
@@ -166,7 +170,9 @@ func upload(options *ObjectOptions) error {
 		uploadInput.ServerSideEncryption = options.encryption
 	}
 
-	_, err = uploader.UploadWithContext(publishContext, &uploadInput)
+	_, err = uploader.UploadWithContext(publishContext, &uploadInput, func(u *s3manager.Uploader) {
+		u.PartSize = 1024 * 1024 * 1024 // 1GB per part
+	})
 	if err != nil {
 		return errors.WithStack(err)
 	}
